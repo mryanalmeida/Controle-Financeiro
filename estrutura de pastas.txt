@@ -1,0 +1,33 @@
+/controle-gastos
+│
+├── backend/                  # Backend Node.js + Express
+│   ├── server.js             # Arquivo principal do servidor
+│   ├── config/
+│   │   └── db.js             # Conexão com MongoDB Atlas
+│   ├── models/
+│   │   ├── User.js           # Modelo de usuário (login, senha, email)
+│   │   └── Gasto.js          # Modelo de gastos
+│   └── routes/
+│       ├── auth.js           # Rotas de cadastro e login
+│       └── gastos.js         # Rotas de CRUD de gastos
+│
+├── frontend/
+│   ├── public/
+│   │   ├── index.html        # Página de login / inicial
+│   │   ├── dashboard.html    # Dashboard do usuário
+│   │   ├── new-expense.html  # Cadastro de gasto
+│   │   └── salary.html       # Cadastro de salário
+│   │
+│   ├── src/
+│   │   ├── css/
+│   │   │   └── style.css     # Todos os estilos
+│   │   ├── js/
+│   │   │   ├── auth.js       # Lógica de login/cadastro
+│   │   │   ├── dashboard.js  # Lógica do dashboard
+│   │   │   ├── expenses.js   # Lógica de cadastro de gastos
+│   │   │   └── salary.js     # Lógica de cadastro de salário
+│   │   └── components/       # Componentes reutilizáveis futuros (ex: Navbar, Gráficos)
+│   │
+│   └── package.json          # Caso queira usar npm (libs como Chart.js, Tailwind)
+│
+└── README.md                 # Documentação do projeto

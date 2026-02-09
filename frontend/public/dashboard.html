@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>Meu Controle Financeiro</h2>
+    </header>
+
+    <main class="dashboard">
+        <div class="card">
+            <p>Salário</p>
+            <h3 id="salary">R$ 0,00</h3>
+        </div>
+
+        <div class="card">
+            <p>Total gasto</p>
+            <h3 id="totalSpent" class="negative">R$ 0,00</h3>
+        </div>
+
+        <div class="card">
+            <p>Saldo</p>
+            <h3 id="balance" class="positive">R$ 0,00</h3>
+        </div>
+
+        <button class="add" onclick="location.href='new-expense.html'">
+            + Novo gasto
+        </button>
+
+        <button class="secondary" onclick="location.href='salary.html'">
+            Definir salário
+        </button>
+    </main>
+
+    <section id="lists-container">
+        <section class="container">
+            <h3>Gastos</h3>
+            <ul id="expenseList"></ul>
+        </section>
+
+        <section class="container">
+            <h3>Gastos por categoria</h3>
+            <ul id="categoryList"></ul>
+        </section>
+    </section>
+
+    <section id="charts-container">
+        <section class="container">
+            <h3>Distribuição dos gastos</h3>
+            <canvas id="categoryChart"></canvas>
+        </section>
+
+        <section class="container">
+            <h3>Gastos por semana</h3>
+            <canvas id="weeklyChart"></canvas>
+        </section>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../src/js/dashboard.js"></script>
+</body>
+
+</html>
